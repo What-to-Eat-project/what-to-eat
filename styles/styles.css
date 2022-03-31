@@ -234,3 +234,32 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #000;
+}
+
+h1 {
+  font-size: 6rem;
+  margin: 0;
+  padding-top: 400px;
+}
+
+header {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url(../assets/header-image.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url(../assets/header-image.jpg);
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: white;
+}
