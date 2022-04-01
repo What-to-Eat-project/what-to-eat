@@ -1,3 +1,13 @@
-p {
-    text-align: center;
-}
+footer {
+    background-color: $secondary;
+    p {
+        margin: 0;
+        text-align: center;
+        color: $solid-white;
+        font-family: $body-font;
+        padding: 10px 0;
+        font-size: 0.8rem;
+    }
+
+} 
+

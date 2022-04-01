@@ -251,19 +251,58 @@ h1 {
   padding-top: 375px;
 }
 
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 header {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url(../assets/header-image.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.4)), url(../assets/header-image.jpg);
   background-size: cover;
+  padding-bottom: 0;
+  overflow: hidden;
 }
 
 h1 {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: white;
+  margin: 0;
 }
 
-p {
+section {
+  height: 200px;
+  background-color: #D8D174;
+  margin-top: -25px;
+}
+section .wrapper {
   text-align: center;
+}
+section h2 {
+  padding-top: 25px;
+}
+
+select {
+  border-style: none;
+  padding: 10px;
+  width: 40%;
+}
+
+footer {
+  background-color: #1c1e57;
+}
+footer p {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 0;
+  font-size: 0.8rem;
 }
