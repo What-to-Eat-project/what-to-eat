@@ -248,7 +248,7 @@ body {
 h1 {
   font-size: 6rem;
   margin: 0;
-  padding-top: 400px;
+  padding-top: 375px;
 }
 
 header {
@@ -262,4 +262,8 @@ h1 {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: white;
+}
+
+p {
+  text-align: center;
 }
