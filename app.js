@@ -3,51 +3,56 @@
 const recipeApp = {};
 
 recipeApp.apiUrl ="https://www.themealdb.com/api/json/v1/1/list.php?i=list/images/media/meals/llcbn01574260722.jpg/preview";
-recipeApp.apiKey = "1";
 
-// Define the method to make request to the API
-recipeApp.getRecipes = () => {
-    const url = new URL(recipeApp.apiUrl)
-    url.search = new URLSearchParams({
-        client_id: recipeApp.apiKey,
-        q: "recipes",
+const url = new URL(recipeApp.apiUrl)
+fetch(url)
+    .then((res) => res.json())
+    .then(data => {
+        food_list = data.meals;
+console.log(food_list);
+    food_list.forEach(food => {
+        const li = document.createElement("li");
+        const node = document.createTextNode(food.strIngredient);
     })
+});
 
-    // fetch api call
-    fetch(url).then((response) => {
-        return response.json();
-    }).then((jsonResponse) => {
-        // call our displayData method, when we have data
-        recipeApp.displayRecipes(jsonResponse);
-    })
-    // fetch(url)
-    //         .then((res) => res.json())
-    //         .then((recipeData) => console.log(recipeData));
-};
+const recipe = document.querySelector("#meal-type");
+recipe.addEventListener("change", function(){
+    console.log(recipe.value);
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${recipe.value}`)
+    .then((res) => res.json())
+    .then(data => {
+        recipe_list = data.meals;
+        console.log(recipe_list);
 
-recipeApp.displayRecipes = (dataFromApi) => {
-    // display code
-    console.log(dataFromApi)
+        recipe_list.forEach(recipes => {
+            const list = document.createElement("li");
+            const nodes = document.createTextNode(recipes.strMeal);
+            list.appendChild(nodes);
+            gallery.appendChild(list);
 
-    // query the document to find the ul element
-    const ul = document.querySelector('ul');
+            const image = document.createElement("img");
+            image.classList.add("recipe-image");
+            image.src=recipes.strMealThumb;
 
-    dataFromApi.forEach((imageObject) => {
-        const listElement = document.createElement('li');
-        const image = document.createElement('img');
+            gallery.appendChild(image);
 
-        image.src = imageObject.strIngredient.regular;
 
-        // append the image element to the parent li
-        listElement.appendChild(image);
-        // append the li to the ul gallery
-        ul.appendChild(listElement);
-    })
-}
+            
 
-recipeApp.init = () => {
-    console.log("Hello World")
-    recipeApp.getRecipes();
-}
+})
+})
+})
 
-recipeApp.init();
+// selecting ONLY one category
+
+// const menu = document.querySelectorAll("#meal-type");
+
+// menu.forEach((individual_menu) => {
+//     individual_menu.addEventListener('click', function () {
+
+//         const selectedRecipe = this.id;
+
+//         recipe_list.displayRecipe(recipe_list.recipes[selectedRecipe]);
+//     })
+// });

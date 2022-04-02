@@ -278,15 +278,23 @@ h1 {
 }
 
 section {
-  height: 200px;
+  height: auto;
   background-color: #D8D174;
-  margin-top: -25px;
+  margin-bottom: 0;
 }
 section .wrapper {
   text-align: center;
 }
 section h2 {
   padding-top: 25px;
+  margin: 0;
+}
+section ul {
+  margin: 0;
+}
+section .recipe-image {
+  width: 200px;
+  height: 200px;
 }
 
 select {
