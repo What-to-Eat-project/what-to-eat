@@ -34,22 +34,16 @@ recipeApp.displayRecipe = function(data){
 
     recipe_list.forEach(recipes => {
         const list = document.createElement("li");
-        const nodes = document.createTextNode(recipes.strMeal);
-        list.appendChild(nodes);
+        const htmlToAppend = `
+            <p class="meal-name">${recipes.strMeal}</p>
+            <a href=${recipes.strSource}>
+                <img src= ${recipes.strMealThumb} class="recipe-image">
+            </a>
+        `
+        list.innerHTML = htmlToAppend;
+
         gallery.appendChild(list);
 
-        const anchor = document.createElement("a")
-        anchor.href=recipes.strSource; 
-
-
-        console.log(anchor)
-
-        const image = document.createElement("img");
-        image.classList.add("recipe-image");
-        image.src=recipes.strMealThumb;
-
-        gallery.appendChild(image);
-        gallery.appendChild(anchor);
     })
 }
 
@@ -68,5 +62,3 @@ recipeApp.getUserInput = function(){
 recipeApp.init = function(){
     recipeApp.getUserInput()
 }
-// selecting ONLY one category
-

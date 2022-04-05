@@ -281,6 +281,7 @@ section {
   height: auto;
   background-color: #D8D174;
   margin-bottom: 0;
+  padding-bottom: 25px;
 }
 section .wrapper {
   text-align: center;
@@ -291,10 +292,33 @@ section h2 {
 }
 section ul {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section li {
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 300px;
 }
 section .recipe-image {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+}
+section .meal-name {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 10px;
+  padding: 10px 0;
+  width: 100%;
 }
 
 select {
