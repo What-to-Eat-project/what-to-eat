@@ -35,7 +35,9 @@ recipeApp.displayRecipe = function(data){
     recipe_list.forEach(recipes => {
         const list = document.createElement("li");
         const htmlToAppend = `
-            <p class="meal-name">${recipes.strMeal}</p>
+            <div class="meal-name-container"> 
+                <p class="meal-name">${recipes.strMeal}</p> 
+            </div>
             <a href=${recipes.strSource}>
                 <img src= ${recipes.strMealThumb} class="recipe-image">
             </a>

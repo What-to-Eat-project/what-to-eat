@@ -1,0 +1,21 @@
+// Media Query styles
+@media (max-width: 709px) {
+    h1 {
+        padding-top: 200px;
+    }
+
+    select {
+        width: 60%;
+    }
+}
+
+@media (max-width: 360px) {
+select {
+    width: 90%;
+}
+
+    section .recipe-image {
+        width: auto;
+        height: 250px;
+    }
+}

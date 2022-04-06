@@ -286,10 +286,6 @@ section {
 section .wrapper {
   text-align: center;
 }
-section h2 {
-  padding-top: 25px;
-  margin: 0;
-}
 section ul {
   margin: 0;
   display: -webkit-box;
@@ -297,9 +293,8 @@ section ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 section li {
   list-style: none;
@@ -308,17 +303,36 @@ section li {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 300px;
+  margin: 1rem;
 }
-section .recipe-image {
+
+h2 {
+  padding-top: 25px;
+  margin: 0;
+}
+
+.recipe-image {
   width: 300px;
   height: 300px;
+  opacity: 1;
 }
-section .meal-name {
+
+.meal-name {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 10px;
   padding: 10px 0;
   width: 100%;
+}
+
+.meal-name-container {
+  min-height: 5rem;
+}
+
+li:hover,
+li:focus {
+  opacity: 0.5;
+  color: white;
 }
 
 select {
@@ -337,4 +351,24 @@ footer p {
   font-family: "Open Sans", sans-serif;
   padding: 10px 0;
   font-size: 0.8rem;
+}
+
+@media (max-width: 709px) {
+  h1 {
+    padding-top: 200px;
+  }
+
+  select {
+    width: 60%;
+  }
+}
+@media (max-width: 360px) {
+  select {
+    width: 90%;
+  }
+
+  section .recipe-image {
+    width: auto;
+    height: 250px;
+  }
 }
