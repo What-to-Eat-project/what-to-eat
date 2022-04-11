@@ -287,6 +287,7 @@ section .wrapper {
   text-align: center;
 }
 section ul {
+  padding: 0;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,6 +356,10 @@ footer p {
 footer a {
   text-decoration: none;
   color: white;
+}
+
+a:hover {
+  color: #D8D174;
 }
 
 @media (max-width: 709px) {
