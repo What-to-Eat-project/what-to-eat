@@ -47,8 +47,8 @@ h2 {
     min-height: 5rem;
 }
 
-li:hover,
-li:focus {
+li a:hover,
+li a:focus {
     opacity: 0.5;
     color: $solid-white;
 }

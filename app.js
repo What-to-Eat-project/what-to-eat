@@ -4,14 +4,6 @@ const recipeApp = {};
 
 recipeApp.apiUrl ="https://www.themealdb.com/api/json/v1/1/search.php?s";
 
-// recipeApp.categories = function(){
-//     fetch(recipeApp.apiUrl)
-//     .then((res) => res.json())
-//     .then((data) => {
-//         console.log(data)
-//     })
-// }
-
 recipeApp.getRecipe = function(query){
     const url = new URL(recipeApp.apiUrl)
 
@@ -29,8 +21,6 @@ recipeApp.getRecipe = function(query){
 
 recipeApp.displayRecipe = function(data){
     const recipe_list = data;
-    console.log(recipe_list);
-    // document.querySelector('#gallery').innerHTML = ''
 
     recipe_list.forEach(recipes => {
         const list = document.createElement("li");

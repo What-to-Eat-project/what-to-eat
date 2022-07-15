@@ -330,8 +330,8 @@ h2 {
   min-height: 5rem;
 }
 
-li:hover,
-li:focus {
+li a:hover,
+li a:focus {
   opacity: 0.5;
   color: white;
 }
@@ -366,7 +366,6 @@ a:hover {
   h1 {
     padding-top: 200px;
   }
-
   select {
     width: 60%;
   }
@@ -375,7 +374,6 @@ a:hover {
   select {
     width: 90%;
   }
-
   section .recipe-image {
     width: auto;
     height: 250px;
